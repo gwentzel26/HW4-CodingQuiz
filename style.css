@@ -1,0 +1,43 @@
+body {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: burlywood;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 16px; 
+}
+
+.time {
+    text-align: center;
+    margin-top: 400px;
+    font-size: 18px;
+}
+
+#quiz-section {
+    
+}
+
+#answer1,
+#answer2,
+#answer3,
+#answer4 {
+    font-size: 20px;
+    height: 40px;
+    width: 140px;
+    background-color: brown;
+    color: whitesmoke;
+    
+}
+
+#highscore {
+    float: left;
+}
+
+#submittedScores {
+    float: left;
+}

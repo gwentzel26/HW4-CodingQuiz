@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header><h1>Coding Quiz Challenge</h1></header>
+    
+<main>
+    <div id = "starting-page">
+        <p>Attempt to answer the following code-based questions.  You will start the quiz with 100 seconds left on the timer.  If you <br>
+        answer a question incorrectly, 15 seconds will be subtracted from the clock. Once all questions are answered or there is 0 <br>
+        seconds left on the clock then the quiz will end and you have the opportunity to save your score.
+        </p>
+        <button id="startQuiz">Start Quiz
+            <!-- type="reset" value="Reset" onClick="window.location.reload()" -->
+        </button>
+    </div>
+
+    <div id="quiz-section">
+        <h2 id="currentQuestion"></h2>
+        
+        <button id="answer1" class="ansBtn"></button>
+        <button id="answer2" class="ansBtn"></button>
+        <button id="answer3" class="ansBtn"></button>
+        <button id="answer4" class="ansBtn"></button>
+    </div>
+
+
+    <div id="renderInitials">
+        <h2>Game Over!</h2>
+        <h3 id="highscore">View highscores</h3>
+        <p>Initials: </p>    <span id="submittedScores"></span>
+        <p>score: </p>
+        <p>Enter your Initials to save your highscores</p>
+        <input id = "initials" type="text" placeholder="Ex: GBW">
+        <button id="submit">submit</button>
+
+    </div>
+
+
+
+
+
+    <div class="time"></div>
+</main>
+  
+
+
+    <script src = "./script.js"></script>
+</body>
+</html>
