@@ -20,6 +20,7 @@ var submittedScores = document.querySelector("#submittedScores");
 // var   = document.querySelector(" ");
 // var   = document.querySelector(" ");
 var score = 0;
+// array holding all questions, options, and answers getting cycled through by question index
 const quests = [
   {
     text: "Which of the following is not an event listener?",
@@ -39,7 +40,7 @@ const quests = [
       ["variable carLength;",
       "var carLength;",
       "v: carLength;",
-      "carLength = variable;"],
+      "carLength = var;"],
     answer: "var carLength;",
   },
 
@@ -50,10 +51,11 @@ const quests = [
   },
 ];
 
+// hide both the quiz section and render initials section on page load
 quizEl.style.display = "none";
 renderInitials.style.display = "none";
 
-// When the user clicks on Start Quiz, the function startBtn begins.
+// When the user clicks on Start Quiz, the function startBtn begins by hiding the home page and showing the previously hidden quiz section.
 startEl.addEventListener("click", startBtn);
 function startBtn() {
   homeEl.style.display = "none";
@@ -88,9 +90,10 @@ function quizSection() {
   ans4.textContent = quests[questionIndex].options[3];
   // quizEl.style.display = "block";
 }
-// for (let document.button of allBtn) {
+
+// on the click of any button determine if the button the user clicked matched the answer
 quizEl.addEventListener("click", function (event) {
-  // function quizDisplay(event) {
+ 
   if (event.target.matches(".ansBtn")) {
     if (event.target.textContent === quests[questionIndex].answer) {
       score++;
